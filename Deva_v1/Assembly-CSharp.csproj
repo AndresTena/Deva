@@ -60,21 +60,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\cResponseBasic.cs" />
-    <Compile Include="Assets\cResponseGeneric.cs" />
-    <Compile Include="Assets\cResponseHappiness.cs" />
-    <Compile Include="Assets\cResponseHate.cs" />
-    <Compile Include="Assets\cResponseLove.cs" />
-    <Compile Include="Assets\cResponseSadness.cs" />
-    <Compile Include="Assets\cResponseType.cs" />
-    <Compile Include="Assets\EmailMenu.cs" />
-    <Compile Include="Assets\InformeMenu.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
-    <Compile Include="Assets\Question.cs" />
-    <Compile Include="Assets\questionPool.cs" />
-    <Compile Include="Assets\Session.cs" />
-    <Compile Include="Assets\Store.cs" />
-    <Compile Include="Assets\TesterMenu.cs" />
+    <Compile Include="Assets\Scripts\cResponseBasic.cs" />
+    <Compile Include="Assets\Scripts\cResponseGeneric.cs" />
+    <Compile Include="Assets\Scripts\cResponseHappiness.cs" />
+    <Compile Include="Assets\Scripts\cResponseHate.cs" />
+    <Compile Include="Assets\Scripts\cResponseLove.cs" />
+    <Compile Include="Assets\Scripts\cResponseSadness.cs" />
+    <Compile Include="Assets\Scripts\cResponseType.cs" />
+    <Compile Include="Assets\Scripts\EmailMenu.cs" />
+    <Compile Include="Assets\Scripts\InformeMenu.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Question.cs" />
+    <Compile Include="Assets\Scripts\questionPool.cs" />
+    <Compile Include="Assets\Scripts\Session.cs" />
+    <Compile Include="Assets\Scripts\Store.cs" />
+    <Compile Include="Assets\Scripts\TesterMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

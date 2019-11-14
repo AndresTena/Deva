@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/deva_menu.unity
+    path: Assets/Scenes/deva_menu.unity
     guid: c5397fb2f6a150840b640bc14658b7b4
   - enabled: 1
-    path: Assets/deva_v1.unity
+    path: Assets/Scenes/deva_v1.unity
     guid: 2b5f83f63e3db49469ff2d11c8c84a17
   m_configObjects: {}
