@@ -7,10 +7,21 @@ using UnityEngine.EventSystems;
 
 public class EmailMenu : MonoBehaviour
 {
-    public GameObject titleObj, textobj, notification;
+    public GameObject titleObj, textobj, notification, menu;
+    public PestanasMenu pestanas;
+    Animator animacionDerecha, animacionIzquierda;
     TextMeshProUGUI title, text;
     TextMeshProUGUI [] botones;
 
+    public void Update()
+    {
+        if (menu.gameObject.activeSelf)
+        {
+            pestanas.abrirPestanas();
+        }
+
+    }
+   
     public void message()
     {
         notification.gameObject.SetActive(false);

@@ -7,10 +7,19 @@ using UnityEngine.EventSystems;
 
 public class InformeMenu : MonoBehaviour
 {
-    public GameObject mensajePos1, mensajePos2, mensajePos3, mensajePos4, mensajePos5, mensajePos6, notification;
-    bool error1send, error2send, error3send, error4send, error5send = false;
+    public GameObject mensajePos1, mensajePos2, mensajePos3, mensajePos4, mensajePos5, mensajePos6, notification, menu;
+    public PestanasMenu pestanas;
+    bool error1send, error2send, error3send, error4send, error5send, error6send = false;
     string title, asunto;
 
+    public void Update()
+    {
+        if (menu.gameObject.activeSelf)
+        {
+            pestanas.abrirPestanas();
+        }
+
+    }
     public void sendInf()
     {
         string nameErr = EventSystem.current.currentSelectedGameObject.name;
@@ -51,6 +60,13 @@ public class InformeMenu : MonoBehaviour
                 if (!error5send)
                 {
                     error5send = true;
+                    updateEmail(EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<TextMeshProUGUI>()[0].text, EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<TextMeshProUGUI>()[0].text);
+                }
+                break;
+            case "Informe6Button":
+                if (!error5send)
+                {
+                    error6send = true;
                     updateEmail(EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<TextMeshProUGUI>()[0].text, EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<TextMeshProUGUI>()[0].text);
                 }
                 break;
