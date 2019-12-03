@@ -73,27 +73,33 @@
     <Compile Include="Assets\GAF\Scripts\Objects\GAFObjectsManager.cs" />
     <Compile Include="Assets\GAF\Scripts\Objects\Interfaces\GAFBakedObjectsManagerInternal.cs" />
     <Compile Include="Assets\GAF\Scripts\Objects\Interfaces\GAFObjectsManagerInternal.cs" />
+    <Compile Include="Assets\paradoLine.cs" />
+    <Compile Include="Assets\Scripts\cambioColor.cs" />
+    <Compile Include="Assets\Scripts\cambioDeva.cs" />
     <Compile Include="Assets\Scripts\ClickMenu.cs" />
     <Compile Include="Assets\Scripts\cResponseBasic.cs" />
-    <Compile Include="Assets\Scripts\cResponseGeneric.cs" />
-    <Compile Include="Assets\Scripts\cResponseHappiness.cs" />
-    <Compile Include="Assets\Scripts\cResponseHate.cs" />
-    <Compile Include="Assets\Scripts\cResponseLove.cs" />
-    <Compile Include="Assets\Scripts\cResponseSadness.cs" />
     <Compile Include="Assets\Scripts\cResponseType.cs" />
-    <Compile Include="Assets\Scripts\EmailMenu.cs" />
-    <Compile Include="Assets\Scripts\InformeMenu.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\GameState.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\cambiarEstado.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\EmailMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\HistorialMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\InformeMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\PestanasMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\SoundsDoor.cs" />
+    <Compile Include="Assets\Scripts\Interfaz\TesterMenu.cs" />
+    <Compile Include="Assets\Scripts\Mensaje.cs" />
+    <Compile Include="Assets\Scripts\next.cs" />
     <Compile Include="Assets\Scripts\parado.cs" />
-    <Compile Include="Assets\Scripts\PestanasMenu.cs" />
+    <Compile Include="Assets\Scripts\PestanasDeva.cs" />
     <Compile Include="Assets\Scripts\Question.cs" />
     <Compile Include="Assets\Scripts\questionAnim.cs" />
     <Compile Include="Assets\Scripts\questionPool.cs" />
     <Compile Include="Assets\Scripts\responsesAnim.cs" />
     <Compile Include="Assets\Scripts\Session.cs" />
     <Compile Include="Assets\Scripts\Store.cs" />
-    <Compile Include="Assets\Scripts\TesterMenu.cs" />
     <Compile Include="Assets\Scripts\transparente.cs" />
+    <Compile Include="Assets\test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -127,6 +133,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\transparenteLine.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\GAF\Resources\Shaders\GAFShaderBase.cginc" />
@@ -374,6 +381,12 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.12f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="GAF">
+      <HintPath>C:/Users/andre/Documents/Unity/Deva_v1/Assets/GAF/Plugins/GAF.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>C:/Users/andre/Documents/Unity/Deva_v1/Assets/GAF/Plugins/Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/andre/Documents/Unity/Deva_v1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -382,12 +395,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Users/andre/Documents/Unity/Deva_v1/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip.Reduced">
-      <HintPath>C:/Users/andre/Documents/Unity/Deva_v1/Assets/GAF/Plugins/Ionic.Zip.Reduced.dll</HintPath>
-    </Reference>
-    <Reference Include="GAF">
-      <HintPath>C:/Users/andre/Documents/Unity/Deva_v1/Assets/GAF/Plugins/GAF.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

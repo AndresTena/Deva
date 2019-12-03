@@ -39,5 +39,6 @@ public class parado : StateMachineBehaviour
         animator.SetBool("fadeIn", false);
         animator.SetBool("fadeOut", false);
         animator.SetBool("next", true);
+        animator.SetBool("next2", false);
     }
 }
