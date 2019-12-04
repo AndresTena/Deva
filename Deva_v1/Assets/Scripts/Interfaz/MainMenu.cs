@@ -12,10 +12,30 @@ public class MainMenu : MonoBehaviour
     bool actTesterMenu, actEmailMenu, changeScene = false;
     static bool change = false;
     bool changeColor = true;
-    
+    string title, asunto, text;
+    bool mensajeEnviado = false;
+
 
     public void Update()
     {
+        if (GameState.gameState.decision == "Neutral" && GameState.gameState.currentQ>47 && !mensajeEnviado)
+        {
+            GameState.gameState.decision = "";
+            GameState.gameState.currentQ = 0;
+            GameState.gameState.currentSession = -1;
+            GameState.gameState.love = 0;
+            GameState.gameState.sadness = 0;
+            GameState.gameState.hatred = 0;
+            GameState.gameState.stability = 0;
+            GameState.gameState.neutral = 0;
+            GameState.gameState.firstTime = true;
+            title = "NeoDeo Std";
+            asunto = "Informe de errores.";
+            text = "Tras revisar los módulos de lenguaje de su versión de la aplicación no hemos percibido ninguna anomalía relevante. Probablemente se trate de algo relacionado con su propia personalidad, a la cual Deva se está adaptando. Le rogamos que tenga paciencia y si le desagrada esa clase de actitud evite dar respuestas relacionadas con la falta de modales.\n\n\nSiga testeando feliz, atentamente:\n\n\nNeoDeo Std.";
+            Mensaje mensaje = new Mensaje(title, asunto, text);
+            GameState.gameState.bandejaEmail.Add(mensaje);
+            mensajeEnviado = true;
+        }
         if (GameState.gameState.firstTime)
         {
             notificacion.SetActive(true);

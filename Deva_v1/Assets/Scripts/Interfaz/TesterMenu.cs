@@ -48,6 +48,15 @@ public class TesterMenu : MonoBehaviour
         }
         else if (actReset)
         {
+            GameState.gameState.decision = "";
+            GameState.gameState.currentQ = 0;
+            GameState.gameState.currentSession = -1;
+            GameState.gameState.love = 0;
+            GameState.gameState.sadness = 0;
+            GameState.gameState.hatred = 0;
+            GameState.gameState.stability = 0;
+            GameState.gameState.neutral = 0;
+            GameState.gameState.firstTime = true;
             if (change)
             {
                 SceneManager.LoadScene("deva_menu");

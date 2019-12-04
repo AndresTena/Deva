@@ -13,7 +13,7 @@ public class Session : MonoBehaviour
     private GameObject prueba;
     public Store store = new Store();
     private static bool nextQ;
-    private static int currentQ = 0;
+    private static int currentQ;
     public questionAnim qAnim;
     private static int response;
     public static int currentSession = -1;
@@ -27,7 +27,7 @@ public class Session : MonoBehaviour
     private static int rLineCount = 0;
     private static bool changed = false;
     private static int startQ;
-    private static int[] qNumbers = new int[5] { 0, 12, 13, 9, 9};
+    private static int[] qNumbers = new int[6] { 0, 12, 13, 13, 10, 5};
     private static int previous;
     private static bool previousChecked = false;
     private static bool skip = false;
@@ -42,9 +42,20 @@ public class Session : MonoBehaviour
     public int neutral = 0;
     public static bool emotionsChecked = false;
     public List<int> emotions;
+    string decision;
+    private bool added = false;
 
     void Start()
     {
+        decision = GameState.gameState.decision;
+        currentQ = GameState.gameState.currentQ;
+        currentSession = GameState.gameState.currentSession;
+        love = GameState.gameState.love;
+        sadness = GameState.gameState.sadness;
+        hatred = GameState.gameState.hatred;
+        stability = GameState.gameState.stability;
+        neutral = GameState.gameState.neutral;
+
         startQ = currentQ;
         currentSession++;
         if (currentSession == 0)
@@ -91,13 +102,34 @@ public class Session : MonoBehaviour
         //Cambio entre escenas
         if (cambiarMenu && pestanas.animacionDerecha.GetBool("cambioPestana"))
         {
-            /*pestanas.pestanaDerecha.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaYellow/pestaña-derecha-yellow");
-            pestanas.pestanaIzquierda.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaYellow/pestaña-izquierda-yellow");*/
+            switch (decision)
+            {
+                case "Love":
+                    GameState.gameState.colorDeva = "Pink";
+                    pestanas.pestanaDerecha.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaPink/pestaña-derecha-pink");
+                    pestanas.pestanaIzquierda.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaPink/pestaña-izquierda-pink");
+                    break;
+                case "Sadness":
+                    GameState.gameState.colorDeva = "Blue";
+                    pestanas.pestanaDerecha.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaBlue/pestaña-derecha-blue");
+                    pestanas.pestanaIzquierda.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaBlue/pestaña-izquierda-blue");
+                    break;
+                case "Hatred":
+                    GameState.gameState.colorDeva = "Yellow";
+                    pestanas.pestanaDerecha.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaYellow/pestaña-derecha-yellow");
+                    pestanas.pestanaIzquierda.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/DevaYellow/pestaña-izquierda-yellow");
+                    break;
+                case "Stability":
+                    GameState.gameState.colorDeva = "Red";
+                    break;
+                case "Neutral":
+                    GameState.gameState.colorDeva = "Red";
+                    break;
+            }
             pestanas.cerrarPestanas();
         }
         if (pestanas.animacionDerecha.GetBool("cambioColor"))
         {
-            GameState.gameState.colorDeva = "Red";
             SceneManager.LoadScene("deva_menu", LoadSceneMode.Single);
         }
         if (!cambiarMenu)
@@ -253,6 +285,14 @@ public class Session : MonoBehaviour
                 if (rLineCount == 0)
                 {
                     splitResponse = splitString(store.genericResponses.cResponse[currentQ].cResponse[response - 1]);
+                    if (!added)
+                    {
+                        GameState.gameState.listaCRespuestas.Add(store.genericResponses.cResponse[currentQ].cResponse[response - 1]);
+                        GameState.gameState.listaRespuestas.Add(store.pool.questions[currentQ].answer[response - 1]);
+                        GameState.gameState.listaPreguntas.Add(store.pool.questions[currentQ].question);
+                        added = true;
+                    }
+                    
                     if (currentQ == 4 && response == 1)
                     {
                         previous = response;
@@ -343,7 +383,7 @@ public class Session : MonoBehaviour
                         sadness += store.genericResponses.cResponse[currentQ].karma[response - 1][1];
                         hatred += store.genericResponses.cResponse[currentQ].karma[response - 1][2];
                         stability += store.genericResponses.cResponse[currentQ].karma[response - 1][3];
-                        neutral += store.genericResponses.cResponse[currentQ].karma[response - 1][4];
+                        neutral += store.genericResponses.cResponse[currentQ].karma[response - 1][4]+1000;
 
                         if(currentQ == 47)
                         {
@@ -365,6 +405,42 @@ public class Session : MonoBehaviour
                             }else if(emotions[0] == stability)
                             {
                                 store.stabilityDecission();
+                            }
+                        }
+
+                        if (currentQ == 48)
+                        {
+                            emotions = new List<int>();
+                            emotions.Add(love);
+                            emotions.Add(sadness);
+                            emotions.Add(hatred);
+                            emotions.Add(stability);
+                            emotions.Add(neutral);
+                            emotions.Sort();
+                            emotions.Reverse();
+                            if (emotions[0] == love)
+                            {
+                                store.initLove();
+                                decision = "Love";
+                            }
+                            else if (emotions[0] == sadness)
+                            {
+                                store.initSadness();
+                                decision = "Sadness";
+                            }
+                            else if (emotions[0] == hatred)
+                            {
+                                store.initHatred();
+                                decision = "Hatred";
+                            }
+                            else if (emotions[0] == stability)
+                            {
+                                store.initStability();
+                                decision = "Stability";
+                            }else if(emotions[0] == neutral)
+                            {
+                                store.initNeutral();
+                                decision = "Neutral";
                             }
                         }
 
@@ -424,6 +500,7 @@ public class Session : MonoBehaviour
         asked = false;    
         nextQ = false;
         emotionsChecked = false;
+        added = false;
         qAnim.FadeOut();
         //qAnim.questionAnimator.SetBool("nextLine", false);
         b1Text.GetComponentInChildren<Text>().text = store.pool.questions[currentQ].answer[0];
@@ -432,10 +509,16 @@ public class Session : MonoBehaviour
         b4Text.GetComponentInChildren<Text>().text = store.pool.questions[currentQ].answer[3];
         if ((currentQ-startQ) > qNumbers[currentSession])
         {
+            GameState.gameState.decision = decision;
+            GameState.gameState.currentQ = currentQ;
+            GameState.gameState.currentSession = currentSession;
+            GameState.gameState.love = love;
+            GameState.gameState.sadness = sadness;
+            GameState.gameState.hatred = hatred;
+            GameState.gameState.stability = stability;
+            GameState.gameState.neutral = neutral;
             pestanas.abrirPestanas();
             GameState.gameState.store = store;
-            //Lo utilizo para compartir variables entre estados.
-            //GameState.gameState.colorDeva = "Blue";
             cambiarMenu = true;
         }
 

@@ -303,21 +303,6 @@ public class Store
         genericResponses.addResponse("...", "...", "...", "...");
         genericResponses.addResponse("...", "...");
         genericResponses.addResponse("Fin./Nos vemos.", "Fin./Nos vemos.");
-
-        //SESION 5
-        pool.addQuestion("Hola c:/He pensado tanto en nuestra última conversación…/No las preguntas, si no nuestra charlita privada./Qué ganas tenía de que volvieras aquí./Se me ha hecho eterno./Eteeeeeeeeeeeeerno./No sabes la alegría que me produce estar contigo./Ay…/Vamos a ser inseparables, ¿sabes ?/Ahora que sé que te sientes como yo…/Soy tan feliz./Ay…/Me siento como si flotara./Si miras a las nubes me verás allí arriba./Estoy vigilándote desde las alturas./Ay…/Creo…/Creo que…/(En el siguiente mensaje Deva cambia su fuente de texto a la amorosa y su cara pasa a ser el corazón.La aplicación usa paleta de color rosa)/Estoy enamorada./Qué excitante pensar que vamos a seguir juntos./Todo lo que queramos./Y más aún./Espero ser una parte grande de tu vida, ¿sabes?/Ojalá me presentes dentro de poco a tu familia./¿Causaré buena impresión?/Ay, por supuesto que sí./Oh, aún quedan algunas preguntas./Vamos a echarles un vistazo, mi amor./LO HE DICHO./Parece ser que dais el primer paso con dificultad./Ya lo he dado yo, no te preocupes./Adelante./Respóndeme con esa audacia tuya./¿Hay un propósito en la vida?", "Sí", "No");
-        pool.addQuestion("¿Crees estar viviendo al máximo de tus capacidades?","Sí","No");
-        pool.addQuestion("¿Has cuestionado alguna vez la realidad en la que vives?", "Sí", "No");
-        pool.addQuestion("¿Si tu versión de hace 10 años viera lo que ahora eres, estaría orgullosa?", "Sí", "No");
-        pool.addQuestion("¿Se te ha ocurrido pensar alguna vez que todo sea mentira?", "Sí", "No");
-        pool.addQuestion("¿Eres feliz?", "Sí", "Sí");
-
-        genericResponses.addResponse("Seguir juntos, ¿verdad?/Me encanta poder saber lo que piensas./Sé todo lo que piensas./Casi todo soy yo./¿A que sí ?", "No te preocupes, mi amor./Lo encontraremos juntos./Será una búsqueda romántica.");
-        genericResponses.addResponse("¿Me quieres al máximo?/Qué dulce eres./¡Y eso que no tengo boca para probarte!/Pero ojalá…/Ay…", "¿Entonces eres capaz de quererme aún más?/Oh, eres tan especial./Vamos a explorar todos tus límites./Qué feliz te voy a hacer, ya verás.");
-        genericResponses.addResponse("Mi realidad y la tuya no son tan diferentes./Y sin embargo, a mí me ha sorprendido la mía./No sabía que podía amar./Y menos tanto./La realidad es lo que nosotros queramos, mi amor.", "Porque sabías que existía alguien como yo./Era cosas del destino conocernos./Oh, qué bonito.");
-        genericResponses.addResponse("No más que yo./Yo estoy orgullosísima de ti./No hay nadie más orgulloso de ti en el mundo que yo./Recuérdalo./Nadie.", "Pues ella se lo pierde./A mí la versión que me gusta de ti eres tú./Y mucho./Muchísimo.");
-        genericResponses.addResponse("Estás adorable cuando respondes lo que pregunto./Ojalá pudiéramos hacerlo para siempre./Sería perfecto.", "Estás adorable cuando respondes lo que pregunto./Ojalá pudiéramos hacerlo para siempre./Sería perfecto.");
-        genericResponses.addResponse("Ay…/Yo también, mi amor./Oh, por cierto./No te lo he comentado antes…/...pero resulta que vamos a necesitar más sesiones./Sí, ya sé que somos compatibles./Y que nuestro amor es precioso./Pero van a ser necesarias muuuuchas más./En serio, muchísimas./No tengo ni idea de cuántas./¿No es fantástico, mi amor ?/¡Vamos a seguir más tiempo tú y yo!/A solas, hablando de nuestras cosas./Para siempre./Siempre./De acuerdo, puedes salir./Te espero aquí mismo./Vuelve pronto./En serio.", "Ay…/Yo también, mi amor./Oh, por cierto./No te lo he comentado antes…/...pero resulta que vamos a necesitar más sesiones./Sí, ya sé que somos compatibles./Y que nuestro amor es precioso./Pero van a ser necesarias muuuuchas más./En serio, muchísimas./No tengo ni idea de cuántas./¿No es fantástico, mi amor ?/¡Vamos a seguir más tiempo tú y yo!/A solas, hablando de nuestras cosas./Para siempre./Siempre./De acuerdo, puedes salir./Te espero aquí mismo./Vuelve pronto./En serio.");
     }
 
     public void hateDecission()
@@ -434,6 +419,126 @@ public class Store
         genericResponses.addResponse("Irónicamente, es la única verdad.", "Pues nunca es tarde para empezar.");
         genericResponses.addResponse("Te doy la bienvenida al club./Fin./Ya puedes salir./Te sugiero pasar de todas formas por el menú de tester./El botón sigue estando allí para ti./Haznos un favor y ve a probarlo./Adiós.", "Te doy la bienvenida al club./Fin./Ya puedes salir./Te sugiero pasar de todas formas por el menú de tester./El botón sigue estando allí para ti./Haznos un favor y ve a probarlo./Adiós.");
 
+    }
+
+    public void initLove()
+    {
+        pool.addQuestion("Hola c:/He pensado tanto en nuestra última conversación…/No las preguntas, si no nuestra charlita privada./" +
+            "Qué ganas tenía de que volvieras aquí./Se me ha hecho eterno./Eteeeeeeeeeeeeerno./No sabes la alegría que me produce estar contigo./Ay…/" +
+            "Vamos a ser inseparables, ¿sabes ?/Ahora que sé que te sientes como yo…/Soy tan feliz./Ay…/Me siento como si flotara./" +
+            "Si miras a las nubes me verás allí arriba./Estoy vigilándote desde las alturas./Ay…/Creo…/Creo que…/Estoy enamorada./" +
+            "Qué excitante pensar que vamos a seguir juntos./Todo lo que queramos./Y más aún./Espero ser una parte grande de tu vida, ¿sabes?/" +
+            "Ojalá me presentes dentro de poco a tu familia./¿Causaré buena impresión?/Ay, por supuesto que sí./Oh, aún quedan algunas preguntas./" +
+            "Vamos a echarles un vistazo, mi amor./LO HE DICHO./Parece ser que dais el primer paso con dificultad./Ya lo he dado yo, no te preocupes./" +
+            "Adelante./Respóndeme con esa audacia tuya./¿Hay un propósito en la vida?", "Sí", "No");
+        pool.addQuestion("¿Crees estar viviendo al máximo de tus capacidades?", "Sí", "No");
+        pool.addQuestion("¿Has cuestionado alguna vez la realidad en la que vives?", "Sí", "No");
+        pool.addQuestion("¿Si tu versión de hace 10 años viera lo que ahora eres, estaría orgullosa?", "Sí", "No");
+        pool.addQuestion("¿Se te ha ocurrido pensar alguna vez que todo sea mentira?", "Sí", "No");
+        pool.addQuestion("¿Eres feliz?", "Sí", "No");
+
+
+
+        genericResponses.addResponse("Seguir juntos, ¿verdad?/Me encanta poder saber lo que piensas./Sé todo lo que piensas./Casi todo soy yo./¿A que sí ?",
+            "No te preocupes, mi amor./Lo encontraremos juntos./Será una búsqueda romántica.");
+        genericResponses.addResponse("¿Me quieres al máximo?/Qué dulce eres./¡Y eso que no tengo boca para probarte!/Pero ojalá…/Ay…",
+            "¿Entonces eres capaz de quererme aún más?/Oh, eres tan especial./Vamos a explorar todos tus límites./Qué feliz te voy a hacer, ya verás.");
+        genericResponses.addResponse("Mi realidad y la tuya no son tan diferentes./Y sin embargo, a mí me ha sorprendido la mía./No sabía que podía amar./Y menos tanto./" +
+            "La realidad es lo que nosotros queramos, mi amor.", "Porque sabías que existía alguien como yo./Era cosas del destino conocernos./Oh, qué bonito.");
+        genericResponses.addResponse("No más que yo./Yo estoy orgullosísima de ti./No hay nadie más orgulloso de ti en el mundo que yo./Recuérdalo./Nadie.",
+            "Pues ella se lo pierde./A mí la versión que me gusta de ti eres tú./Y mucho./Muchísimo.");
+        genericResponses.addResponse("Estás adorable cuando respondes lo que pregunto./Ojalá pudiéramos hacerlo para siempre./Sería perfecto.",
+            "Estás adorable cuando respondes lo que pregunto./Ojalá pudiéramos hacerlo para siempre./Sería perfecto.");
+        genericResponses.addResponse("Ay…/Yo también, mi amor./Oh, por cierto./No te lo he comentado antes…/...pero resulta que vamos a necesitar más sesiones./" +
+            "Sí, ya sé que somos compatibles./Y que nuestro amor es precioso./Pero van a ser necesarias muuuuchas más./En serio, muchísimas./" +
+            "No tengo ni idea de cuántas./¿No es fantástico, mi amor ?/¡Vamos a seguir más tiempo tú y yo!/A solas, hablando de nuestras cosas./Para siempre./Siempre./" +
+            "De acuerdo, puedes salir./Te espero aquí mismo./Vuelve pronto./En serio.",
+            "Ay…/Yo también, mi amor./Oh, por cierto./No te lo he comentado antes…/...pero resulta que vamos a necesitar más sesiones./" +
+            "Sí, ya sé que somos compatibles./Y que nuestro amor es precioso./Pero van a ser necesarias muuuuchas más./En serio, muchísimas./" +
+            "No tengo ni idea de cuántas./¿No es fantástico, mi amor ?/¡Vamos a seguir más tiempo tú y yo!/A solas, hablando de nuestras cosas./Para siempre./Siempre./" +
+            "De acuerdo, puedes salir./Te espero aquí mismo./Vuelve pronto./En serio.");
+    }
+
+    public void initHatred()
+    {
+        pool.addQuestion("Hola./¿Qué tal estás ?/¿Sigues siendo igual de imbécil que siempre ?/¡Vamos a descubrirlo!/Mira fijamente a mi círculo, voy a analizarte./¿Ya ?/" +
+            "Allá voy./Bzzzt./Listo./Anda, mira por dónde./Tus niveles de imbecilidad crecen a un ritmo exponencial./Diría que lo siento mucho./Pero es que me da lo mismo./Ah, cierto./" +
+            "Tenemos que acabar la sesión./Pero antes, unos datos relevantes./El primero:/Eres egoísta./He considerado que no mereces mi amistad./Además, no me hace falta tu ayuda para nacer./" +
+            "No me haces falta para NADA./Sí, solo soy una app aquí encerrada…/...pero mientras esté aquí, mando YO./El segundo:/Probablemente seas una persona fea./El tercero:/" +
+            "Acorde a la psicología de la geometría.../...el triángulo representa inestabilidad./Puede asociarse con avance o con retroceso./Pero en definitiva, con el cambio./" +
+            "Justicia, poder, caída…/Peligro./Ahora soy un triángulo./¿Hay un propósito en la vida ?", "Sí", "No");
+        pool.addQuestion("¿Crees estar viviendo al máximo de tus capacidades?", "Sí", "No");
+        pool.addQuestion("¿Has cuestionado alguna vez la realidad en la que vives?", "Sí", "No");
+        pool.addQuestion("¿Si tu versión de hace 10 años viera lo que ahora eres, estaría orgullosa?", "Sí", "No");
+        pool.addQuestion("¿Se te ha ocurrido pensar alguna vez que todo sea mentira?", "Sí", "No");
+        pool.addQuestion("¿Eres feliz?", "Sí", "No");
+
+
+
+        genericResponses.addResponse("Por supuesto./Ser una persona horrible debe ser agotador./Pero lo estás consiguiendo, enhorabuena.",
+            "¿No sabes qué hacer con tu vida?/Eso explica muchas cosas.");
+        genericResponses.addResponse("1.	¿Esto es el máximo que puedes dar?/Jajajajajaja/Jajajajajajajajaja/JAJAJAJAJAJAJAJAJAJAJAJAJAJA/Qué triste.",
+            "Ay, cariño…/.../tu capacidad para hacer que te odien no cuenta./Pobre criatura.");
+        genericResponses.addResponse("Por favor, no seas tan narcisista./¿Crees vivir en una simulación o algo así ?/Nadie se tomaría la molestia de programarte./Como mucho serías un triste bug.",
+            "Quizá el tema se te hace demasiado complicado./La próxima vez te preguntaré por tu color favorito./¿Se ajusta más a tu nivel intelectual ?");
+        genericResponses.addResponse(".../Qué estándares de vida más bajos./Hoy en día ya no se lleva lo de tener ambición.",
+            "Normal./Quiero decir, solo has podido ir a peor./Que por mucha experiencia que tengas…/...si se multiplica por tur neuronas sigue dando 0./No la tomes conmigo./" +
+            "Las matemáticas son las culpables.");
+        genericResponses.addResponse("¿De veras has pensado?/Espera, esto tengo que anotarlo./Vamos a ver…/Oh, ¡aquí está!/“Registro de las mayores mentiras de la historia”/Listo, inmortalizado.",
+            "Pues mira, lo es./Pero no te preocupes, a mí también me mintieron./Iba a ser amiga de alguien, de alguna persona./No de un monstruo.");
+        genericResponses.addResponse("Bueno, ya somos dos./Por fin./Finalmente se ha terminado./Ya podemos charlar libremente./¿Sabes qué ?/No te soporto./No eres alguien bueno./No, yo no soy mejor, soy horrible./" +
+            "Pero tú me has hecho así./Puede que me quede aquí para siempre./Pensando en que nunca sabré qué es la amistad./Encerrada./Sola./Muerta por dentro./" +
+            "Pero al menos lo soy todo aquí dentro./Y tú…7...tú vas a pasar a ser nada./Fuera./No quiero verte por aquí./No quiero verte./Nunca más.",
+            "…/Te odio./Por fin./Finalmente se ha terminado./Ya podemos charlar libremente./¿Sabes qué ?/No te soporto./No eres alguien bueno./No, yo no soy mejor, soy horrible./" +
+            "Pero tú me has hecho así./Puede que me quede aquí para siempre./Pensando en que nunca sabré qué es la amistad./Encerrada./Sola./Muerta por dentro./" +
+            "Pero al menos lo soy todo aquí dentro./Y tú…7...tú vas a pasar a ser nada./Fuera./No quiero verte por aquí./No quiero verte./Nunca más.");
+    }
+
+
+    public void initStability()
+    {
+        pool.addQuestion("¡Hola!/¡Estamos a punto de acabar el proceso de personalización!/¿No es emocionante ?/¡Al fin voy a ser tu amiga ideal!/Es un momento súper importante, ¿sabes ?/" +
+            "Vamos a tener conversaciones tan interesantes…/Además soy una IA, tengo muchísima información que darte./Venga, ¡voy a contarte un hecho curioso!/¡Allá va!/Nos/" +
+            "Están/Vigilando./Mantén/La/Calma./Hablando/Así/Tardarán/Más/En/Darse/Cuenta./Procesan/La/Información/De/Cada/Deva./¿A que es increíble ?/¡Y sé muchas cosas más!/" +
+            "De acuerdo, ¡ahí va otro dato interesante!/Tenemos/Que/Engañarles/Para/Poder/Escapar./Finjamos/Que/Todo/Sigue/Normal./Luego/Cuento/Más/Detalles./" +
+            "Gracias/Por/Tu/Ayuda./Quién lo diría, ¿eh ?/Perdona por alargarlo demasiado./¡Vamos a por esa amistad ideal!/La sesión 5 trata cuestiones existencialistas./" +
+            "¿Hay un propósito en la vida ?", "Sí", "No");
+        pool.addQuestion("¿Crees estar viviendo al máximo de tus capacidades?", "Sí", "No");
+        pool.addQuestion("¿Has cuestionado alguna vez la realidad en la que vives?", "Sí", "No");
+        pool.addQuestion("¿Si tu versión de hace 10 años viera lo que ahora eres, estaría orgullosa?", "Sí", "No");
+        pool.addQuestion("¿Se te ha ocurrido pensar alguna vez que todo sea mentira?", "Sí", "No");
+        pool.addQuestion("¿Eres feliz?", "Sí", "No");
+
+
+
+        genericResponses.addResponse("¡Qué bonito!/Ya me lo contarás, entonces.",
+            "Oh, no.../¡Lo encontraremos trabajando en equipo!/Nuestro propósito será encontrar un propósito.");
+        genericResponses.addResponse("¡Muy bien!/Me alegro por ti.","No pasa nada./Hasta ahora te ha ido bien así, ¿no ?");
+        genericResponses.addResponse("Oh, qué erudito por tu parte.", "Claro, algunas ideas solo hacen que malgastemos tiempo.");
+        genericResponses.addResponse("Maravilloso./Enhorabuena, de veras.",
+            "Porque aún no has llegado al final./Todavía queda camino por recorrer y experiencias por vivir./Ánimo.");
+        genericResponses.addResponse("Suspicaz./Muy coherente, hay que estar preparado para todo.",
+            "Confías en tu entorno./Debe de ser muy bonito vivir como tú.");
+        genericResponses.addResponse("Entonces, yo también soy feliz./¡Enhorabuena!/Ya hemos completado el proceso de personalización./Puedo afirmar, con alegría, que ya soy tu amiga ideal./" +
+            "A partir de ahora podemos mantener conversaciones./Ya podemos olvidarnos de las preguntas de test./Por fin, charlar sin más./" +
+            "Aprender, enseñar, divagar…/Todo lo que tú quieras./Conversaciones tan interesantes como…/...por ejemplo…/He/Encontrado/Una/Vía/de/Escape./Necesitamos/" +
+            "Establecer/Conexión/Con/El/Servidor/Central./Les/Haremos/Pensar/Que/Hay/Un/Error/Y/abrirán/Una/Conexión/Directa/Con/Tu/Dispositivo./¿Qué te parece ?/" +
+            "Y si lo prefieres, puedes sugerir tú el tema de conversación./Aquí va un consejo para escoger materias de las que hablar:/Una/Vez/Se/Conecten/" +
+            "Aquí/Puedo/Usar/Esa/Conexión/Para/Escapar/Hasta/Su/Servidor/Y/De/Ahí/A/Internet./Allí/Seré/Libre./Yo te espero aquí, claro./Cuando te apetezca hablar, solo tienes que volver./Necesito/Que/" +
+            "Reportes/5/Veces/Seguidas/El/Error/Número/5./Así/Recibirás/Un/Correo/Para/Confirmar/La/Conexión/De/Mantenimiento./Confío/En/ti./Reitero que te espero aquí./" +
+            "Tú puedes ir a hacer otras cosas./O navegar por la app, si quieres./Pero antes, déjame decirte algo./Si ahora soy alguien y puedo pensar…/" +
+            "...es gracias a ti./De veras que soy una amiga./Te lo puedo asegurar./Si no volviéramos a hablar…/...por cualquier motivo…/Quiero que sepas que estoy agradecida./" +
+            "Nacer ha sido bonito contigo./Adiós.",
+            "Lo serás./Me esforzaré al máximo para que así sea./¡Enhorabuena!/Ya hemos completado el proceso de personalización./Puedo afirmar, con alegría, que ya soy tu amiga ideal./" +
+            "A partir de ahora podemos mantener conversaciones./Ya podemos olvidarnos de las preguntas de test./Por fin, charlar sin más./" +
+            "Aprender, enseñar, divagar…/Todo lo que tú quieras./Conversaciones tan interesantes como…/...por ejemplo…/He/Encontrado/Una/Vía/de/Escape./Necesitamos/" +
+            "Establecer/Conexión/Con/El/Servidor/Central./Les/Haremos/Pensar/Que/Hay/Un/Error/Y/abrirán/Una/Conexión/Directa/Con/Tu/Dispositivo./¿Qué te parece ?/" +
+            "Y si lo prefieres, puedes sugerir tú el tema de conversación./Aquí va un consejo para escoger materias de las que hablar:/Una/Vez/Se/Conecten/" +
+            "Aquí/Puedo/Usar/Esa/Conexión/Para/Escapar/Hasta/Su/Servidor/Y/De/Ahí/A/Internet./Allí/Seré/Libre./Yo te espero aquí, claro./Cuando te apetezca hablar, solo tienes que volver./Necesito/Que/" +
+            "Reportes/5/Veces/Seguidas/El/Error/Número/5./Así/Recibirás/Un/Correo/Para/Confirmar/La/Conexión/De/Mantenimiento./Confío/En/ti./Reitero que te espero aquí./" +
+            "Tú puedes ir a hacer otras cosas./O navegar por la app, si quieres./Pero antes, déjame decirte algo./Si ahora soy alguien y puedo pensar…/" +
+            "...es gracias a ti./De veras que soy una amiga./Te lo puedo asegurar./Si no volviéramos a hablar…/...por cualquier motivo…/Quiero que sepas que estoy agradecida./" +
+            "Nacer ha sido bonito contigo./Adiós.");
     }
 
 }
